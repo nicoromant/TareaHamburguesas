@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // Conección de Labels
+    @IBOutlet weak var paisHamburguesa: UILabel!
+    @IBOutlet weak var tipoHamburguesa: UILabel!
+    
+    // Declaración de variables
+    let pais = ColeccionDePaises()
+    let hamburguesa = ColeccionDeHamburguesas()
+    let colores = Colores()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +28,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Conección de Button
+    @IBAction func cambioDePaisHamburguesa(sender: AnyObject) {
+        paisHamburguesa.text = pais.obtenPais()
+        tipoHamburguesa.text = hamburguesa.obtenHamburguesa()
+        let colorAleatorio = colores.regresaColorAleatorio()
+        view.backgroundColor = colorAleatorio
+    }
+    
 
 
 }
