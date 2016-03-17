@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TareaHamburguesas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="País de tu Hamburguesa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFZ-Og-WjK">
+                                <rect key="frame" x="20" y="210" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamburguesa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zn0-m6-gJS">
+                                <rect key="frame" x="20" y="239" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de Hamburguesa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKb-Zu-oRx">
+                                <rect key="frame" x="20" y="336" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nw-jY-2a0">
+                                <rect key="frame" x="20" y="365" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXW-C1-5VF">
+                                <rect key="frame" x="20" y="99" width="560" height="30"/>
+                                <state key="normal" title="Quiero una hamburguesa!"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cXW-C1-5VF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="79" id="93R-2x-qlB"/>
+                            <constraint firstItem="Zn0-m6-gJS" firstAttribute="top" secondItem="aFZ-Og-WjK" secondAttribute="bottom" constant="8" symbolic="YES" id="A8M-95-iFm"/>
+                            <constraint firstItem="aFZ-Og-WjK" firstAttribute="top" secondItem="cXW-C1-5VF" secondAttribute="bottom" constant="81" id="DAH-23-Gqp"/>
+                            <constraint firstItem="aFZ-Og-WjK" firstAttribute="leading" secondItem="Zn0-m6-gJS" secondAttribute="leading" id="MV6-3f-i0m"/>
+                            <constraint firstItem="cXW-C1-5VF" firstAttribute="leading" secondItem="aFZ-Og-WjK" secondAttribute="leading" id="Qsn-Ym-oOW"/>
+                            <constraint firstItem="aKb-Zu-oRx" firstAttribute="top" secondItem="Zn0-m6-gJS" secondAttribute="bottom" constant="76" id="Str-Zc-170"/>
+                            <constraint firstItem="aFZ-Og-WjK" firstAttribute="trailing" secondItem="Zn0-m6-gJS" secondAttribute="trailing" id="Uun-g1-7ca"/>
+                            <constraint firstItem="aKb-Zu-oRx" firstAttribute="trailing" secondItem="7nw-jY-2a0" secondAttribute="trailing" id="Wog-0w-pJm"/>
+                            <constraint firstItem="Zn0-m6-gJS" firstAttribute="leading" secondItem="aKb-Zu-oRx" secondAttribute="leading" id="YpP-ov-iOu"/>
+                            <constraint firstItem="cXW-C1-5VF" firstAttribute="trailing" secondItem="aFZ-Og-WjK" secondAttribute="trailing" id="cf5-lH-p3A"/>
+                            <constraint firstItem="Zn0-m6-gJS" firstAttribute="trailing" secondItem="aKb-Zu-oRx" secondAttribute="trailing" id="ill-VV-akC"/>
+                            <constraint firstItem="7nw-jY-2a0" firstAttribute="top" secondItem="aKb-Zu-oRx" secondAttribute="bottom" constant="8" symbolic="YES" id="lQ1-no-qXL"/>
+                            <constraint firstItem="cXW-C1-5VF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="upS-vg-92E"/>
+                            <constraint firstItem="aKb-Zu-oRx" firstAttribute="leading" secondItem="7nw-jY-2a0" secondAttribute="leading" id="xp3-6h-fKw"/>
+                            <constraint firstItem="cXW-C1-5VF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zIS-nK-VZK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="447" y="382"/>
         </scene>
     </scenes>
 </document>
