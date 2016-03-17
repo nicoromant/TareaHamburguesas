@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // Conección de Labels
+    // Conexión de Labels
     @IBOutlet weak var paisHamburguesa: UILabel!
     @IBOutlet weak var tipoHamburguesa: UILabel!
     
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // Conección de Button
+    // Conexión de Button
     @IBAction func cambioDePaisHamburguesa(sender: AnyObject) {
         paisHamburguesa.text = pais.obtenPais()
         tipoHamburguesa.text = hamburguesa.obtenHamburguesa()
